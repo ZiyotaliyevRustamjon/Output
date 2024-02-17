@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.container {
+    .heroSection {
+        width: 100%;
+        height: 100vh;
+        background: url('../Images/HeroImage.avif');
+        background-size: cover;
+        background-position: center;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            nav {
+                display: flex;
+                gap: 30px;
+                font-family: sans-serif;
+                a {
+                    color: #fff;
+                }
+            }
+            .logo {
+                a {
+                    color: #fff;
+                    font-family: sans-serif;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .HeroBar {
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .heroTitle {
+                font-size: 100px;
+                font-family: sans-serif;
+                color: transparent;
+                background: linear-gradient(135deg, #ffc000 25%, #ffff00 60%, #ffc000 80%);
+                background-clip: text;
+            }
+            .heroText {
+                font-size: 25px;
+                font-family: sans-serif;
+                color:#fff;
+                margin: 20px 0;
+            }
+            .heroBtn {
+                padding: 20px 50px;
+                font-size: 18px;
+                background: linear-gradient(135deg, #ffc000 25%, #ffff00 60%, #ffc000 80%);
+                border: none;
+                border-radius: 50px;
+                font-weight: 800;
+                cursor: pointer;
+                transition: 0.5s;
+                &:hover {
+                    background: linear-gradient(135deg, #ffc000 0%, #ffff00 100%, #ffc000 0%);
+                }
+            }
+        }
+    }
+
+    .helpSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px 40px;
+        font-family: sans-serif;
+        text-align: center;
+        background: #deddde;
+        h1 {
+            font-size: 140px;
+            color: rgb(34, 34, 34);
+        }
+        p {
+            width: 90%;
+            font-size: 25px;
+            color: rgb(34, 34, 34);
+        }
+    }
+
+    .soundsCardBar {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        background: #deddde;
+        .card {
+            width: 40%;
+            font-family: sans-serif;
+            cursor: pointer;
+            h1 {
+                font-size: 50px;
+                color: rgb(34, 34, 34);
+            }
+            p {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    footer {
+        .footerBar {
+            display: flex;
+            padding: 60px 100px;
+            font-family: sans-serif;
+            background-color: #deddde;
+            .footerElements {
+                width: 25%;
+                display: flex;
+                justify-content: start;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 20px;
+                h1, h3, a {
+                    color:rgb(34, 34, 34);
+                    cursor: pointer;
+                    transition: 0.5s;
+                    position: relative;
+                    &:hover span {
+                        width: 100%;
+                    }
+                    span {
+                        width: 0%;
+                        height: 1px;
+                        background-color: rgb(34, 34, 34);
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 850px) {
+    .container {
+        footer {
+            .footerBar {
+                padding: 50px 20px;
+                gap: 20px;
+            }
+        }
+
+        .helpSection {
+            h1 {
+                font-size: 100px;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        .heroSection {
+            text-align: center;
+        }
+        footer {
+            .footerBar {
+            flex-direction: column;
+            gap: 30px;
+            .footerElements {
+                width: 100%;
+            }
+        }
+        }
+        
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        .heroSection {
+            header {
+                flex-direction: column;
+                nav {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+            }
+
+            .HeroBar {
+                .heroTitle {
+                    font-size: 30px;
+                }
+                .heroText {
+                    font-size: 16px;
+                }
+            }
+        }
+        .helpSection {
+            h1 {
+                font-size: 60px;
+            }
+        }
+        .soundsCardBar {
+            .card {
+                width: 100%;
+            }
+        }
+    }
+}
